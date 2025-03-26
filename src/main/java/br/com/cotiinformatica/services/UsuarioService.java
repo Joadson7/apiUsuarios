@@ -57,7 +57,7 @@ public class UsuarioService {
 		var usuario = usuarioRepository.findByEmailAndSenha(request.getEmail(), sha256Component.encrypt(request.getSenha()));
 		
 		if(usuario == null) {
-			throw new IllegalArgumentException("Acesso negado. Usuário não encontrado");
+			throw new IllegalArgumentException("Acesso negado. Usuário não encontrado.");
 			
 		}
 		
